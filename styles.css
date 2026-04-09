@@ -1,0 +1,35 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+.p1, .p2, .p3{
+    font-size: xx-large;
+}
+.p1{
+    font-family: "Montsserrat", sans-serif;
+}
+
+.p2{
+    font-family: "Roboto", sans-serif;
+}
+
+.p3{
+    font-family: "Open Sans", sans-serif;
+} */
+
+.main{
+
+}
+
+.news{
+
+}
+/*
+Dark mode styles
+Quando o BODY estiver com a classe "dark", as variáveis de cor de texto e fundo serão alteradas para branco e preto, respectivamente.
+*/
+body.dark{
+    --text-color: white;
+    --background-color: black;
+}
