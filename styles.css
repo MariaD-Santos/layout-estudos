@@ -1,35 +1,52 @@
-/* *{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Montserrat&display=swap');
+
+:root {
+  --primary-color: #4285f4;
+  --text-color: #333;
+  --bg-color: #fff;
+  --font-family: 'Roboto', sans-serif;
 }
 
-.p1, .p2, .p3{
-    font-size: xx-large;
-}
-.p1{
-    font-family: "Montsserrat", sans-serif;
+/* Estilos base */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
-.p2{
-    font-family: "Roboto", sans-serif;
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
 }
 
-.p3{
-    font-family: "Open Sans", sans-serif;
-} */
+.header-controls{
+    display: flex;
+    gap: 1rem;
+}
+
+.control-group{
+    display: flex;
+    flex-direction: column
+}
 
 .main{
-
+    padding: 2rem;
 }
 
 .news{
-
+    max-width: 800px;
+    margin: 0 auto;
 }
-/*
-Dark mode styles
-Quando o BODY estiver com a classe "dark", as variáveis de cor de texto e fundo serão alteradas para branco e preto, respectivamente.
-*/
-body.dark{
+
+body.dark {
     --text-color: white;
-    --background-color: black;
+    --bg-color: black;
 }
