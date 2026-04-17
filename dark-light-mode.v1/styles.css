@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary-color-light: #f0f0f0;
     --secondary-color-light: #ffffff;
     --text-color-light: #333;
@@ -72,4 +72,81 @@
 .container-button-theme, .theme-button{
     border: none;
     padding: 10px;
+} */
+
+:root {
+    --primary-color-light: #f0f0f0;
+    --secondary-color-light: #ffffff;
+    --text-color-light: #333;
+    --hover-color-light: #ddd;
+    --button-bg-light: #e0e0e0;
+    --button-hover-light: #ccc;
+    --sidebar-bg-light: #ffffff;
+
+    --primary-color-dark: #1e1e1e;
+    --secondary-color-dark: #2e2e2e;
+    --text-color-dark: #f0f0f0;
+    --hover-color-dark: #555;
+    --button-bg-dark: #333;
+    --button-hover-dark: #444;
+    --sidebar-bg-dark: #2e2e2e;
+}
+
+
+
+.theme__content {
+    background-color: var(--primary-color-light);
+
+    display: flex;
+
+    margin: 0;
+    height: 100vh;
+    gap: 30px;
+}
+
+.theme__content.dark {
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+}
+
+.button__alterar-tema {
+    background-color: var(--button-bg-light);
+    color: var(--text-color-light);
+
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: none;
+}
+
+.dark  .button__alterar-tema {
+    background-color: var(--button-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.nav-group__buttons {
+    background-color: var(--sidebar-bg-light);
+    background-color: var(--secondary-color-light);
+
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+
+    gap: 30px;
+    padding: 25px;
+    margin-top: 0;
+}
+
+.dark .nav-group__buttons {
+    background-color: var(--sidebar-bg-dark);
+    background-color: var(--secondary-color-dark);
+}
+
+.nav-group__buttons a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
 }
