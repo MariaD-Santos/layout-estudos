@@ -1,15 +1,16 @@
 const colorPicker = document.querySelector('#color-picker');
 const fontSelect = document.querySelector('#font-select');
 const themeToggle = document.querySelector('#theme-toggle');
-const articleColorPicker = document.querySelector('#article-color-picker');
+const articleColorPicker = document.querySelectorAll('#article-color-picker');
 const body = document.querySelector('body');
 const newsArticles = document.querySelector('.news');
 
 
-const loadPreferences = () =>{
+const loadPreferences = () => {
     const savedColor = localStorage.getItem('primaryColor');
-    if (savedColor){
-        document.documentElement.setProperty('--primary-color', savedColor);
+    if (savedColor) {
+        document.documentElement.style.setProperty('--primary-color',
+            savedColor);
         colorPicker.value = savedColor;
     }
 
@@ -28,9 +29,10 @@ const loadPreferences = () =>{
 
 
     const savedTheme = localStorage.getItem('theme');
+    console.log(savedTheme)
     if (savedTheme === 'dark') {
         body.classList.add('dark');
-        themeToggle.textContent = '<span class="material-icons">light_mode</span>'
+        themeToggle.textContent = 'dark_mode'
     }
 
 
@@ -47,10 +49,11 @@ colorPicker.addEventListener('input', (e) => {
 });
 
 articleColorPicker.addEventListener('input', (e) => {
+    
     const color = e.target.value;
-    newsArticles.forEach(article => {article.style.backgroundColor = color})
+    newsArticles.forEach(article => {article.style.backgroundColor = color })
 
-    localStorage.addEventListener('articleColor', color)
+    localStorage.setItem('articleColor', color)
 
 });
 
@@ -65,10 +68,7 @@ themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark');
     const isDark = body.classList.contains('dark');
 
-    themeToggle.innerHTML = isDark
-    ? '<span class="material-icons">light_mode</span>'
-    : '<span class="material-icons">dark_mode</span>';
-
+    themeToggle.textContent = 'dark_mode'
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
 });
 
