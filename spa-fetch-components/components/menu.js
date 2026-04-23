@@ -2,7 +2,7 @@ export const startMenu = () => {
     const menus = document.querySelectorAll('[data-menu]');
     console.log(menus);
     menus.forEach((menu) => {
-        const button = menu.querySelector('.menu-button');
+        const button = menu.querySelector('.menu__button');
 
         // Changes the menu activity
         const toggleMenu = () => {
