@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,30 @@
     <link rel="stylesheet" href="./assets/global.css">
     <link rel="stylesheet" href="./assets/menu.css">
 </head>
+
 <body>
 
     <div data-componente="menu">
+        <header class="header">
+            <a href="" class="header__logo"></a>
+            <nav><button class="menu__button">
+                    Menu
+                    <span class="menu__hamburguer"></span>
+                </button>
+                <ul class="menu__list">
+                    <li><a href="#" data-link="home">Home</a></li>
+                    <li><a href="#" data-link="about">About</a></li>
+                    <li><a href="#" data-link="product">Products</a></li>
+                    <li><a href="#" data-link="portifolio">Portifolio</a></li>
+                    <li><a href="#" data-link="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
 
     <main data-conteudo></main>
 
     <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
