@@ -1,12 +1,18 @@
-// tests using w3schools example codes
-// let anna = (num) => console.log(num * 5);
 
 
 try {
-    console.log(anna(5))
-  
+    // isActive = 0;
+    // let teste = isActive == 1 ? 'Not active' : 'Active'
+    // let teste2 = isActive == 0 ? 'Not active' : 'Active'
+    // console.log(teste, teste2)
+    isActive = 0;
+    let teste = isActive == 1 ? 'Not active' : 'Active'
+    console.log(teste)
+
+    // EU SEI FAZER UM IF TERNARIO EHEHEHHHAHAHHSHAHHEHHEH XD
 
 } catch (erro) {
+
     let text = `
     <strong>Error name:</strong> ${erro.name}<br />
     <strong>Message:</strong> ${erro.message}<br />
@@ -14,3 +20,4 @@ try {
   `;
     document.body.innerHTML = text
 };
+
