@@ -1,13 +1,15 @@
 // tests using w3schools example codes
-let x = 5;
-let y = 'carro';
+// let anna = (num) => console.log(num * 5);
+
 
 try {
-    x = y + 1;
+    console.log(anna(5))
+  
+
 } catch (erro) {
     let text = `
-    <strong>Nome do erro:</strong> ${erro.name}<br />
-    <strong>Mensagem:</strong> ${erro.message}<br />
+    <strong>Error name:</strong> ${erro.name}<br />
+    <strong>Message:</strong> ${erro.message}<br />
     <strong>Stack:</strong> <span>${erro.stack}</span>
   `;
     document.body.innerHTML = text
