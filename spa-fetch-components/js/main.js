@@ -1,4 +1,4 @@
-import {startMenu} from '../components/menu.js';
+import { startMenu } from '../components/menu.js';
 
 // Load the HTML via fetch and injects into the container
 
