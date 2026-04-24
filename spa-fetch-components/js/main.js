@@ -44,6 +44,7 @@ const startLinks = () => {
     });
 };
 
+
 const startApp = async () => {
     const containerMenu = document.querySelector('[data-componente = "menu"]');
 
@@ -57,7 +58,8 @@ const startApp = async () => {
     await loadComponent('./pages/home.html', content);
 };
 
-/*  Await: Pauses the execution of a async function until an Promise(sucess or failure) is resolved
+/*  
+    Await: Pauses the execution of a async function until an Promise(sucess or failure) is resolved
     Async: Allows the page to load time-consuming tasks without breaking the main page's thread
     Catch: Treats the error present inside the code block.
 */
