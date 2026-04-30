@@ -1,0 +1,75 @@
+segunda forma de fzer
+
+const teste = document.querySelector('body')
+
+loadComponent('c-test.html', teste)
+
+/////////
+
+terceira forma
+
+const path = 'c-test.html'
+const teste = document.querySelector('body')
+
+loadComponent(path,teste)
+
+//////
+
+/* Testando a função: carregarComponente
+01 - Criar o componente que será injetado
+02 - Criar o elemento que irá receber o componente (no index index.html) (<div id="app"></div>)
+03 - Capturar o elemento que irá receber o componente( no index.html)
+04 - Utilizar a função para carregar o componente */
+const loadComponent = async (contentPatch, container) => {
+    try{
+        const response = await fetch(contentPatch);
+
+        if(!response.ok){
+            throw new Error('Erro ao carregar componente')
+        }
+
+        const html = await response.text();
+        container.innerHTML = html;
+
+    } catch (erro) {
+        console.error(erro);
+    }
+};
+
+loadComponent('c-test.html', document.querySelector('body'))
+
+
+////////////////////////////////
+
+function gerarErros(message, codigo, tipo) {
+
+//     let erro = new Error(message)
+//     erro.codigo = codigo
+//     erro.tipo = tipo
+
+//     return erro
+// };
+
+
+// try {
+
+//     let saldo = 0
+
+//     if (saldo < 1) {
+//         let erro = gerarErros('Saldo insuficiente', 70, 'financeiro');
+//         throw erro;
+//     } else {
+//         console.log('Saldo suficiente')
+//     }
+
+// } catch (erro) {
+//     console.log(erro);
+
+//     let text = `
+//     <strong>Mensagem:</strong>${erro.message}<br />     
+//     <strong>Código:</strong>${erro.codigo}<br />
+//     <strong>Tipo:</strong>${erro.tipo}<br />
+//     `
+
+//     document.body.innerHTML = text;
+// };
