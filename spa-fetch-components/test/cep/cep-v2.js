@@ -1,9 +1,9 @@
    const button = document.getElementById('botao')
-        const cep = document.getElementById('cep')
+
+    const cep = document.getElementById('cep')
+
         
-        function obterCep(){
-            return cep.value.trim();
-        }
+        
 
         button.addEventListener('click', () => {
             const cep = obterCep();
