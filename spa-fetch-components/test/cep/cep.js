@@ -1,28 +1,34 @@
-const button = document.querySelector('button')
-const cep = document.querySelector('cep')
+// const button = document.getElementById('botao')
 
-const botao = button.addEventListener('click') 
 
-const url = 'https://viacep.com.br/ws/01001000/json/'
+// button.addEventListener('click', () => {
+//     const cep = document.getElementById('cep').value
+//     fetch(`https://viacep.com.br/ws/${cep}/json/`)
+//         .then((response) => {
 
-const consulta = fetch(url);
-console.log(consulta)
-consulta.then((resposta) => {
-    if(!resposta.ok){
-        throw new Error('Cep Inválido.')
-    }
-    const resp = resposta.json()
-    console.log(resp)
-    return resp
+//             if (!response.ok) {
+//                 throw new Error('Erro na Requisição.')
+//             }
+//             return response.json()
+//         })
+//         .then((dados) => {
 
-})
+//             if (dados.erro) {
+//                 throw new Error('CEP inválido ou não encontrado.')
+//             }
+//             console.log(dados)
+//         })
+//         .catch((erro) => {
+//             console.warn(erro.message)
+//         })
+// });
 
-.then((dados) => {
 
-    console.log(dados)
-})
-.catch((error) => {
+// async function buscarCep() {
+//     let resposta = await consulta;
+//     console.log(resposta)
+//     let dataObj = await resposta.json();
+//     console.log(dataObj);
+// };
 
-    console.warn(error)
-
-})
+// buscarCep();

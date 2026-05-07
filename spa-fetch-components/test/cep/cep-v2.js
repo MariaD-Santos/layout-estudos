@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEP</title>
-    <script>
-
-        const button = document.getElementById('botao')
+   const button = document.getElementById('botao')
         const cep = document.getElementById('cep')
         
         function obterCep(){
@@ -36,28 +27,3 @@
                     console.warn(erro.message)
                 })
         });
-
-        const url = 
-
-        async function buscarCep() {
-            let resposta = await consulta;
-            console.log(resposta)
-            let dataObj = await resposta.json();
-            console.log(dataObj);
-        };
-
-        buscarCep();
-
-    </script>
-</head>
-
-<body>
-    <div>
-        <h1>Consulta de CEP</h1>
-        <input type="number" placeholder="Digite o CEP:" id="cep">
-        <button id="botao">Buscar com .then()</button>
-        <button id="botao">Buscar com await</button>
-    </div>
-</body>
-
-</html>
